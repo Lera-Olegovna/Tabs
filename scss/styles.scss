@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'normalize';
+@import 'mixins';
+
+* {
+	box-sizing: border-box;
+}
+$text:#fff;
+$text-hover:#8d91a3;
+$bgc:#212534;
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: $text;
+	width: 100%;
+	max-height: 100%;
+	background-color:$bgc ;
+	
+}
+.container{
+	height: 100vh;
+	width: 1000px;
+	margin: 0px auto; 
+	background-color: $bgc;
+	background-image: url('../img/Layer 41.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.card{
+	@include posCentre; 
+	width: 600px;
+	border:1px solid red;
+	min-height: 540px;
+	background-color: $bgc;
+	&__header{
+		height: 115px;
+		padding: 30px;
+		background-color: #2b3040;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		&__item{
+			display: flex;
+			flex-direction: colomn;
+			justify-content: space-around;
+		}
+		&__text{
+			font-size: 28px;
+			color:red;
+		}	
+	}
+	&__body{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		&___photo{
+			outline:1px solid white;
+			width: 40%;
+			background-image: url('../img/cover.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&___info{
+			outline:1px solid white;
+			width: 60%;
+			color:red;
+		}	
+	}
+}
+
+
